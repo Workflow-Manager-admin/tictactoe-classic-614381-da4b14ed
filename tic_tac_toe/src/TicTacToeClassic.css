@@ -1,0 +1,76 @@
+.ttt-outer-container {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px 0 rgba(60,60,60,0.09), 0 1.5px 7px 0 rgba(44,44,44,0.07);
+  max-width: 410px;
+  margin: 52px auto 0 auto;
+  padding: 32px 28px 22px 28px;
+}
+
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #fff;
+  border: 2px solid #222222;
+  border-radius: 7px;
+  box-shadow: 0 1.5px 7px 0 rgba(44,44,44,0.04);
+  overflow: hidden;
+}
+
+.ttt-row {
+  display: flex;
+}
+
+.ttt-cell {
+  width: 75px;
+  height: 75px;
+  background: #fff;
+  font-size: 2.2rem;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  border: 1.8px solid #222222;
+  text-align: center;
+  vertical-align: middle;
+  outline: none;
+  transition: background 0.16s, color 0.19s, outline 0.18s;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0;
+  font-weight: 700;
+}
+
+.ttt-cell:focus-visible {
+  outline: 2px solid #4caf50;
+}
+
+.ttt-cell[disabled],
+.ttt-cell:disabled {
+  opacity: 0.68;
+  cursor: not-allowed;
+}
+
+.ttt-status {
+  min-height: 28px;
+  line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+.ttt-reset-btn {
+  margin-top: 4px;
+}
+
+@media (max-width: 610px) {
+  .ttt-outer-container {
+    max-width: 97vw;
+    padding: 12px 5vw 14px 5vw;
+    min-width: 0;
+  }
+  .ttt-board {
+    max-width: 98vw;
+  }
+  .ttt-cell {
+    width: 18vw;
+    height: 18vw;
+    font-size: 7vw;
+  }
+}
